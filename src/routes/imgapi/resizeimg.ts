@@ -11,12 +11,12 @@ const fullDir = path.resolve(__dirname, '../../assets/full'); // full images dir
 const thumbDir = path.resolve(__dirname, '../../assets/thumb'); // resized images dir
 
 // declear the 404 page path as an error sending
-const errorPage = path.resolve(__dirname, '/404.html');
+const errorPage = path.resolve(__dirname, './../../404.html');
 
 // set the end point to the image and handle the request
 image.get('/image', async (req, res) => {
   const getImage = await getTheImage(req);
-  // res.send(`<div style = "text-align: center; font-size:1.5em;">Working On It lol......</div>`);
+
   if (getImage.length == 2) {
     res.sendFile(thumbDir + '/' + getImage.join(''));
   } else {
@@ -51,7 +51,7 @@ async function getTheImage(req: express.Request): Promise<string[]> {
     }
   } // end if the enteries has any undefined value
   else {
-    return ['some thing wrong with your enteries?'];
+    return ['some thing wrong with your enteries? loading error page'];
   }
   return generatedFile;
 } // end of get the requested image
@@ -62,6 +62,12 @@ function validateTheEntries(imgInfo: {
   width: string;
   height: string;
 }): boolean {
+  if (
+    imgInfo.name == undefined &&
+    imgInfo.width == undefined &&
+    imgInfo.height == undefined
+  )
+    return false;
   return (
     imgInfo.name.length != 0 &&
     Number.parseInt(imgInfo.width) >= 20 &&

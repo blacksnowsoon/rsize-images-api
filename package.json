@@ -9,7 +9,7 @@
     "jasmine": "jasmine",
     "build": "npx tsc",
     "clean": "rm -rf ./dist",
-    "copy": "cp -r ./src/assets ./dist/",
+    "copy": "cp -r ./src/assets ./dist/ && cp ./src/404.html ./dist",
     "start": "nodemon src/index.ts"
   },
   "keywords": [
