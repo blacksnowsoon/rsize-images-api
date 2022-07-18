@@ -1,8 +1,8 @@
- # Resizing Image API 
+ # Resizing Images API 
 
  ## Table of content
  * [overview]
- *[instructions]
+ * [instructions]
  * [dependencies]
 
 
