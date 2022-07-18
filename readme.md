@@ -24,7 +24,7 @@
  ## dependencies
  the main dependencies for that project are:
  
-  express as a server build
-  jasmine for testing environment
-  sharp as a package for converting the images
+ * express as a server build
+ * jasmine for testing environment
+ * sharp as a package for converting the images
   
