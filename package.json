@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "prettier": "prettier --config .prettierrc src/**/*.ts --write",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "npm run lint -- --fix",
     "test": "npm run build && npm run copy && jasmine",
     "jasmine": "jasmine",
     "build": "npx tsc",
     "clean": "rm -rf ./dist",
-    "copy": "cp -r ./src/assets ./dist/ && cp ./src/404.html ./dist",
+    "copy": "cp -r ./src/assets ./dist/",
     "start": "nodemon src/index.ts"
   },
   "keywords": [
@@ -23,6 +25,8 @@
     "@types/node": "^18.0.5",
     "@types/sharp": "^0.30.4",
     "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",

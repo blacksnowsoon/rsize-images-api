@@ -3,6 +3,7 @@
  ## Table of content
  * [overview]
  * [instructions]
+ * [scripts]
  * [dependencies]
 
 
@@ -19,11 +20,21 @@
  ## Instructions
  by cloning this project -- in the cli just write npm install will install all the dependencies
  it need for the project
- * npm run prettier will syle the code
- * npm run start will start a localhost in dev mode
- * npm run jasmine will start the test on the dist folder
- * npm run build will build the app create a dist folder and compile the code move the necessary files and folder from the src to dist
- * npm run clean will delete the dist folder
+
+ ## Scripts
+ * npm run prettier will style the code as code formatter.
+
+ * npm run lint-fix will lint code pattren and show errors.
+
+ * npm run start will start a localhost:3000 in dev mode.
+
+ * npm run build will build the app creating a dist folder and compile the code, move the necessary files and folder from the src to dist.
+ 
+ * npm run test will build the api and start jasmine test.
+
+ * npm run clean will delete the dist folder.
+
+ * npm run jasmine will start the test but you should run build first.
 
 
  ## dependencies

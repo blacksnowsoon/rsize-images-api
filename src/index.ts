@@ -1,15 +1,15 @@
-import express from 'express';
+import express, { Application } from 'express';
 import routes from './routes/routes';
 
 // the app const
-const app = express();
+const app: Application = express();
 // the port value
-const port = 3000;
+const port: number = 3000;
 
 // set the server endpoing
-app.get('/', (req, res) => {
+app.get('/', (req: express.Request, res: express.Response) => {
   res.send(
-    `<h1 style = "text-align: center; font-size:5em;">home page of the app <br>ADD {/api} to the address bar </h1>`
+    `ADD {/api} to the address bar`
   );
 });
 
