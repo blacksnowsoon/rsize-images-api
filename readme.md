@@ -19,6 +19,11 @@
  ## Instructions
  by cloning this project -- in the cli just write npm install will install all the dependencies
  it need for the project
+ * npm run prettier will syle the code
+ * npm run start will start a localhost in dev mode
+ * npm run jasmine will start the test on the dist folder
+ * npm run build will build the app create a dist folder and compile the code move the necessary files and folder from the src to dist
+ * npm run clean will delete the dist folder
 
 
  ## dependencies
