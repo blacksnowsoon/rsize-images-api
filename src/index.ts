@@ -9,7 +9,7 @@ const port = 3000;
 // set the server endpoing
 app.get('/', (req, res) => {
   res.send(
-    `<h1 style = "text-align: center; font-size:5em;">home page of the app <br>ADD {api/} to the address bar </h1>`
+    `<h1 style = "text-align: center; font-size:5em;">home page of the app <br>ADD {/api} to the address bar </h1>`
   );
 });
 

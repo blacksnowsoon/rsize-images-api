@@ -1,11 +1,11 @@
 import supertest from 'supertest';
 import app from '../index';
 import {
-  image,
+  thumbDir,
+  fullDir,
   validateTheEntries,
   generatImageName,
-  isFileExsistInFull,
-  isFileExsistInThumb,
+  isFileExist,
   createNewImage,
 } from '../routes/imgapi/resizeimg';
 
@@ -61,12 +61,12 @@ describe('Test endpoints response', () => {
     });
     // check if the file exsit in full dir
     it('get an [name, extension] for the exsit file in full dir', async () => {
-      const nameArr = await isFileExsistInFull('fjord');
+      const nameArr = await isFileExist('fjord',fullDir);
       expect(nameArr).toContain('fjord');
     });
     // check if the file exsit in thumb dir
     it('get an [name, extension] for the exsit file in thumb dir', async () => {
-      const nameArr = await isFileExsistInThumb('fjord_200_200');
+      const nameArr = await isFileExist('fjord_200_200',thumbDir);
       expect(nameArr).toContain('fjord_200_200');
     });
     // check if the sharp package is working--
