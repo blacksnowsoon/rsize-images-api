@@ -6,9 +6,7 @@ import { image } from './imgapi/resizeimg';
 const routes: Router = express.Router();
 
 routes.get('/', (req: express.Request, res: express.Response) => {
-  res.send(
-    `{image?title={imageName}&width={200}&height={200}}`
-  );
+  res.send(`{image?title={imageName}&width={200}&height={200}}`);
 });
 
 routes.use('/', image);

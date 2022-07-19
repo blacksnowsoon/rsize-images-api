@@ -28,7 +28,7 @@
 
  * npm run start will start a localhost:3000 in dev mode.
 
- * npm run build will build the app creating a dist folder and compile the code, move the necessary files and folder from the src to dist.
+ * npm run build will build the app by creating a dist folder and compile the code, move the necessary files and folder from the src to dist.
  
  * npm run test will build the api and start jasmine test.
 
@@ -36,6 +36,7 @@
 
  * npm run jasmine will start the test but you should run build first.
 
+ * node dist/. will start the localhost:3000 from dist folder.
 
  ## dependencies
  the main dependencies for that project are:
